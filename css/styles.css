@@ -1,0 +1,139 @@
+:root{
+  --purple-1:#2a0056;
+  --purple-2:#5a0fb2;
+  --pink-1:#f0b3d4;
+  --navy:#0f2234;
+  --navy-2:#152b40;
+  --sky:#a8cbe2;
+  --panel:#e3edf5;
+  --white:#ffffff;
+  --muted:#b4b9c3;
+  --accent:#0a1a2b;
+  --shadow:0 8px 24px rgba(0,0,0,.2);
+  --radius:14px;
+  --transition:all .2s ease;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;font-family:Inter,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:#fff;background:#0b0120;}
+a{color:#7be9ff;text-decoration:none}
+a:hover{text-decoration:underline}
+
+/* Botones e inputs */
+.btn{border:none;border-radius:var(--radius);padding:14px 18px;font-weight:700;cursor:pointer;box-shadow:var(--shadow);transition:var(--transition)}
+.btn:disabled{opacity:.6;cursor:not-allowed}
+.btn-primary{background:#cf85ff;color:#1a0033}
+.btn-navy{background:#0c1827;color:#fff}
+.btn-outline{background:transparent;border:1px solid rgba(255,255,255,.25);color:#fff}
+.btn:hover{transform:translateY(-1px)}
+.input{width:100%;padding:14px 16px;border-radius:10px;border:1px solid rgba(255,255,255,.15);background:rgba(255,255,255,.08);color:#fff;outline:none}
+.input::placeholder{color:#c9c9d1}
+.label{display:block;margin:10px 2px 6px;font-size:.85rem;letter-spacing:.03em;opacity:.9}
+.form-col{display:flex;flex-direction:column;gap:8px}
+.card{background:rgba(255,255,255,.1);border-radius:var(--radius);box-shadow:var(--shadow);padding:18px}
+
+/* LOGIN */
+.login-wrap{min-height:100%;display:grid;grid-template-columns:1.1fr .9fr;align-items:center;background: radial-gradient(1000px 700px at 60% 10%, #3a0079, #250048 40%, #140028 75%, #0b0120 100%);padding:40px 6vw;gap:40px}
+.login-left{max-width:520px;margin-left:4vw}
+.login-title{font-size:14px;letter-spacing:.2em;opacity:.8;margin-bottom:8px}
+.login-h1{font-size:36px;margin:0 0 26px}
+.login-actions{display:flex;align-items:center;gap:16px;margin-top:8px}
+.login-small{margin-top:18px;font-size:.9rem;opacity:.9}
+.login-figure{width:520px;height:520px;border-radius:50%;background:rgba(0,0,0,.25);display:grid;place-items:center;overflow:hidden;justify-self:center;background-image:url("../assets/images/login-foto.png");background-size:cover;background-position:center}
+
+/* REGISTER */
+.register-wrap{min-height:100%;padding:36px 6vw 60px;background:#efb3d3;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;color:#1c0033}
+.register-card{background:#f7d1e6;border-radius:16px;padding:20px;box-shadow:var(--shadow)}
+.register-title{font-weight:800;letter-spacing:.06em;margin-left:5px;margin-bottom:4px;color:#7a2068}
+.register-btn{background:#0a1a2b;color:#fff}
+
+/* MODAL */
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.45);display:none;align-items:center;justify-content:center;padding:20px;z-index:1000}
+.modal.show{display:flex}
+.modal-content{background:#fff;color:#0b1b2b;border-radius:14px;min-width:320px;max-width:420px;padding:22px 20px;box-shadow:var(--shadow);text-align:center}
+.modal h3{margin:0 0 18px}
+.modal .btn{width:100%}
+
+/* LAYOUT GENERAL */
+.layout{min-height:100%;display:grid;grid-template-columns:280px 1fr}
+.sidebar{background:linear-gradient(180deg, var(--navy) 0%, var(--navy-2) 100%);padding:26px 18px;color:#dfe9f5;position:relative}
+.profile{display:flex;align-items:center;gap:12px;margin-bottom:28px}
+.profile .avatar{width:44px;height:44px;border-radius:50%;background:#ddd}
+.nav{display:flex;flex-direction:column;gap:8px}
+.nav a{padding:10px 12px;border-radius:10px;color:#cbd8e6;display:block;transition:var(--transition)}
+.nav a:hover{background:#ffffff;color:#0e2136}
+.nav .active{background:rgba(255,255,255,.08)}
+
+/* ====== COLOR DE PANEL (#0B1B32) ====== */
+.main{background:#0B1B32;padding:24px;position:relative;color:#eaf0f6}
+.page .main{background:#0B1B32;color:#eaf0f6}
+
+/* ====== VIDEO MÁS GRANDE Y SIN CONTROLES ====== */
+.video-wrap{position:relative;max-width:1200px;width:100%;margin:0}
+.video-auto{width:100%;aspect-ratio:16/9;border-radius:16px;box-shadow:var(--shadow);background:#4a5157;pointer-events:none}
+/* Ocultar controles en webkit (por si acaso) */
+video::-webkit-media-controls{display:none !important}
+video::-webkit-media-controls-enclosure{display:none !important}
+
+/* ====== MENSAJE CENTRADO SOBRE EL VIDEO ====== */
+.greeting-center{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);background:rgba(255,255,255,.92);color:#0e2136;border-radius:14px;padding:12px 18px;font-weight:800;text-align:center;box-shadow:var(--shadow)}
+.greeting-center div+div{margin-top:6px}
+
+/* ====== NOTIFICACIONES EN #0B1B32 ====== */
+.notifications{position:absolute;top:36px;right:36px;background:#0B1B32;color:#fff;border-radius:18px;padding:14px 16px;width:260px;box-shadow:var(--shadow)}
+.notifications summary{list-style:none;font-weight:800;text-align:center;margin-bottom:8px;cursor:pointer;color:#fff}
+.notice{background:rgba(255,255,255,.10);border-radius:12px;padding:10px 12px;margin:8px 0;text-align:center}
+.notice.active{background:rgba(255,100,100,.18)}
+.notice:hover{filter:brightness(1.08)}
+
+/* FORM PAGES (clientes & trámites) */
+.page{min-height:100%;display:grid;grid-template-columns:280px 1fr;background:#0f2234}
+.form-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;max-width:1100px}
+.form-grid .input{background:rgba(255,255,255,.10);border-color:rgba(255,255,255,.18)}
+.section-title{font-size:22px;margin:0 0 16px}
+.right-pane{padding-left:40px}
+
+/* Grupo desplegable en Trámites */
+.group-box{background:rgba(255,255,255,.08);border-radius:14px;padding:14px;margin-top:8px}
+.group-box details summary{cursor:pointer;font-weight:700}
+.checkbox-grid{display:grid;grid-template-columns:repeat(2,minmax(100px,1fr));gap:10px;margin-top:8px}
+.checkbox-grid label{display:flex;align-items:center;gap:8px}
+.checkbox-grid input{accent-color:#ffe37c}
+
+/* === SOLO CAMBIAR EL PANEL IZQUIERDO (SIDEBAR) A #0B1B32 EN TODAS LAS PÁGINAS === */
+.sidebar{
+  background: #0B1B32 !important;   /* antes gradiente azul */
+  color:#dfe9f5;
+}
+
+/* Mantener el HOVER en blanco en el menú */
+.nav a{ color:#cbd8e6; }
+.nav a:hover{ background:#ffffff; color:#0e2136; }
+
+/* === REVERTIR EL COLOR DEL PANEL PRINCIPAL (DONDE VA EL VIDEO) === */
+.main{
+  background:#a9cbe2 !important;    /* azul claro original del dashboard */
+  color:#0e2136;
+}
+
+/* === REVERTIR EL COLOR DEL MAIN EN OTRAS PÁGINAS (clientes/trámites) === */
+.page .main{
+  background:#2f3d4a !important;    /* gris azulado original */
+  color:#fff;
+}
+
+/* (Opcional) Notificaciones: volver a estilo claro original */
+.notifications{
+  background:#d7e6f2 !important;    /* panel claro */
+  color:#0e2136;
+}
+.notice{ background:#c7d8e6; }
+.notice.active{ background:#f4cfd0; color:#c22727; }
+
+
+/* Notas de rutas (opcionales)
+- Imagen login: ../assets/images/login-foto.png
+- Fondos por página (si quisieras): body[data-page="clientes"] .main{ background:#0B1B32 url("../assets/images/clientes-bg.jpg") center/cover no-repeat; }
+- Video dashboard: assets/videos/presentacion.mp4
+*/

@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Trámites</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body data-page="tramites" class="page">
+  <aside class="sidebar">
+    <div class="profile">
+      <div class="avatar"></div>
+      <div>
+        <div style="font-weight:800">PAOLA RAMIREZ</div>
+        <div class="small">paola17@email.com</div>
+      </div>
+    </div>
+    <nav class="nav">
+      <a href="dashboard.html">INICIO</a>
+      <a href="clientes.html">AGREGAR CLIENTES</a>
+      <a href="#">LISTADO DE CLIENTES</a>
+      <a class="active" href="tramites.html">TRÁMITES</a>
+      <a href="#">ESTADO DE TRÁMITES</a>
+    </nav>
+  </aside>
+
+  <main class="main">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start;max-width:1200px">
+      <section>
+        <h2 class="section-title">Agregar Trámite</h2>
+        <form id="tramitesForm">
+          <div class="form-col">
+            <label class="label">NOMBRE</label>
+            <input class="input" required />
+          </div>
+          <div class="form-col">
+            <label class="label">DESCRIPCIÓN</label>
+            <input class="input" />
+          </div>
+          <div class="form-col">
+            <label class="label">REQUISITOS</label>
+            <input class="input" />
+          </div>
+
+          <div class="form-col">
+            <label class="label">GRUPO</label>
+            <div class="group-box">
+              <details open>
+                <summary>Seleccionar grupo</summary>
+                <div class="checkbox-grid">
+                  <label><input type="checkbox" /> SAT</label>
+                  <label><input type="checkbox" /> CGC</label>
+                  <label><input type="checkbox" /> CONSULTA RAE</label>
+                  <label><input type="checkbox" /> RENAS</label>
+                </div>
+              </details>
+            </div>
+          </div>
+
+          <div class="footer-actions">
+            <button class="btn btn-navy">GUARDAR</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="right-pane">
+        <h2 class="section-title">Agregar Grupo</h2>
+        <div class="form-col">
+          <label class="label">LINK</label>
+          <input class="input" />
+        </div>
+        <div class="form-col">
+          <label class="label">Renas</label>
+          <input class="input" />
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Modal Trámite Guardado -->
+  <div class="modal" id="modal-tramite-ok">
+    <div class="modal-content">
+      <h3>Trámite guardado</h3>
+      <button class="btn btn-navy" data-close onclick="document.getElementById('modal-tramite-ok').classList.remove('show')">Aceptar</button>
+    </div>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

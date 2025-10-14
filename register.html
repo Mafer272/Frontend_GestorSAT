@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Registro</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body data-page="register" class="register">
+  <div class="register-wrap">
+    <section>
+      <form id="registerForm" class="register-card">
+        <div class="form-grid" style="grid-template-columns:1fr 1fr;gap:18px">
+          <div class="form-col">
+            <label class="label register-title">NOMBRE</label>
+            <input class="input" placeholder="Escribir ..." required />
+          </div>
+          <div class="form-col">
+            <label class="label register-title">APELLIDO</label>
+            <input class="input" placeholder="Escribir ..." required />
+          </div>
+
+          <div class="form-col">
+            <label class="label register-title">NOMBRE DE USUARIO</label>
+            <input class="input" placeholder="Escribir ..." required />
+          </div>
+          <div class="form-col">
+            <label class="label register-title">CORREO ELECTRÓNICO</label>
+            <input type="email" class="input" placeholder="usuario@email.com" required />
+          </div>
+
+          <div class="form-col">
+            <label class="label register-title">CONTRASEÑA</label>
+            <input type="password" class="input" placeholder="********" required />
+          </div>
+          <div class="form-col">
+            <label class="label register-title">CONFIRMAR CONTRASEÑA</label>
+            <input type="password" class="input" placeholder="********" required />
+          </div>
+        </div>
+        <div class="footer-actions">
+          <button class="btn register-btn" type="submit">REGISTRARSE</button>
+        </div>
+      </form>
+    </section>
+
+   <aside style="display:grid;place-items:center">
+  <img
+    src="./assets/images/registro-ilustracion.png"
+    alt="Ilustración"
+    style="width:95%;max-height:560px;object-fit:contain;border-radius:16px;"
+    onerror="console.error('No se encontró: ', this.src); this.remove();"
+  >
+</aside>
+
+  </div>
+
+  <!-- Modal Registrado -->
+  <div class="modal" id="modal-registered">
+    <div class="modal-content">
+      <h3>USUARIO REGISTRADO</h3>
+      <button class="btn btn-navy" id="registered-ok" data-close>Aceptar</button>
+    </div>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

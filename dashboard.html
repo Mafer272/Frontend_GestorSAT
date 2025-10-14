@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Panel</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body data-page="dashboard" class="layout">
+  <aside class="sidebar">
+    <div class="profile">
+      <div class="avatar"></div>
+      <div>
+        <div style="font-weight:800">PAOLA RAMIREZ</div>
+        <div class="small">paola17@email.com</div>
+      </div>
+    </div>
+    <nav class="nav">
+      <a href="#" class="active">INICIO</a>
+      <a href="#" id="goClientes">AGREGAR CLIENTES</a>
+      <a href="#">LISTADO DE CLIENTES</a>
+      <a href="#">TRÁMITES</a>
+      <a href="#">ESTADO DE TRÁMITES</a>
+      <a href="#" class="small">Log out</a>
+    </nav>
+  </aside>
+
+  <main class="main">
+  <div class="video-wrap">
+    <!-- VIDEO más grande, sin controles, autoplay y “como animación” -->
+    <video class="video-auto" autoplay muted loop playsinline>
+      <source src="./assets/videos/presentacion.mp4" type="video/mp4">
+    </video>
+
+    <!-- MENSAJES centrados (se verán “dentro del círculo” al estar centrados sobre el video) -->
+    <div class="greeting greeting-center">
+      <div>Hola, Paola — ¡bienvenida!</div>
+    </div>
+  </div>
+
+  <!-- Notificaciones: ahora INICIALMENTE CERRADAS (sin atributo open) -->
+  <details class="notifications">
+    <summary>Notificaciones</summary>
+    <div class="notice active">Notificación 1</div>
+    <div class="notice">Notificación 2</div>
+    <div class="notice">Notificación 3</div>
+    <div class="notice">Notificación 4</div>
+    <div class="notice">Notificación 5</div>
+    <div class="notice">Notificación 6</div>
+    <div class="notice">Notificación 7</div>
+  </details>
+</main>
+
+
+  <script src="js/app.js"></script>
+</body>
+</html>

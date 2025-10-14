@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Agregar Clientes</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body data-page="clientes" class="page">
+  <aside class="sidebar">
+    <div class="profile">
+      <div class="avatar"></div>
+      <div>
+        <div style="font-weight:800">PAOLA RAMIREZ</div>
+        <div class="small">paola17@email.com</div>
+      </div>
+    </div>
+    <nav class="nav">
+      <a href="dashboard.html">INICIO</a>
+      <a class="active" href="clientes.html">AGREGAR CLIENTES</a>
+      <a href="#">LISTADO DE CLIENTES</a>
+      <a href="tramites.html">TRÁMITES</a>
+      <a href="#">ESTADO DE TRÁMITES</a>
+    </nav>
+  </aside>
+
+  <main class="main">
+    <h2 class="section-title">Agregar Cliente</h2>
+    <form id="clientesForm" class="form-grid">
+      <div class="form-col"><label class="label">NOMBRE</label><input class="input" required></div>
+      <div class="form-col"><label class="label">APELLIDO</label><input class="input" required></div>
+      <div class="form-col"><label class="label">TELÉFONO</label><input class="input" required></div>
+
+      <div class="form-col"><label class="label">DIRECCIÓN</label><input class="input"></div>
+      <div class="form-col"><label class="label">NIS</label><input class="input"></div>
+      <div class="form-col"><label class="label">F/N</label><input class="input"></div>
+
+      <div class="form-col"><label class="label">DPI</label><input class="input"></div>
+      <div class="form-col"><label class="label">NIT</label><input class="input"></div>
+      <div class="form-col"><label class="label">CONTRASEÑA BANCARIA</label><input class="input" type="password"></div>
+
+      <div class="form-col"><label class="label">CONTRASEÑA NIT</label><input class="input" type="password"></div>
+      <div class="form-col"><label class="label">CONTRASEÑA CGC</label><input class="input" type="password"></div>
+      <div class="form-col"><label class="label">CONTRASEÑA</label><input class="input" type="password"></div>
+    </form>
+    <div class="footer-actions">
+      <button form="clientesForm" class="btn btn-navy">GUARDAR</button>
+    </div>
+  </main>
+
+  <!-- Modal Guardado -->
+  <div class="modal" id="modal-clientes-ok">
+    <div class="modal-content">
+      <h3>Datos guardados</h3>
+      <button class="btn btn-navy" id="clientes-ok" data-close>Aceptar</button>
+    </div>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
