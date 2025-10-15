@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Estado de Trámites</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body data-page="estado-tramites" class="layout">
+  <aside class="sidebar">
+    <div class="profile">
+      <div class="avatar"></div>
+      <div>
+        <div style="font-weight:800">PAOLA RAMIREZ</div>
+        <div class="small">paola17@email.com</div>
+      </div>
+    </div>
+    <nav class="nav">
+      <a href="dashboard.html">INICIO</a>
+      <a href="clientes.html">AGREGAR CLIENTES</a>
+      <a href="listado-clientes.html">LISTADO DE CLIENTES</a>
+      <a href="listado-tramites.html">LISTADO DE TRÁMITES</a>
+      <a href="estado-tramites.html" class="active">ESTADO DE TRÁMITES</a>
+      <a href="#" class="small">Log out</a>
+    </nav>
+  </aside>
+
+  <main class="main main-estado-tramites">
+    <div class="page-header-estado">
+      <h1 class="estado-title">ESTADO DE TRÁMITES</h1>
+    </div>
+
+    <div class="table-container-estado">
+      <div class="search-wrapper">
+        <input type="text" id="searchInputEstado" class="search-input-estado" placeholder="🔍 Buscar trámite o cliente...">
+      </div>
+
+      <div class="table-wrapper-scroll">
+        <table class="estado-table">
+          <thead>
+            <tr>
+              <th>NOMBRE</th>
+              <th>CLIENTE</th>
+              <th>FECHA DE INICIO</th>
+              <th>ESTADO</th>
+            </tr>
+          </thead>
+          <tbody id="estadoTableBody">
+            <tr data-id="1">
+              <td>Declaración IVA</td>
+              <td>Sofía Torres</td>
+              <td>15/01/2025</td>
+              <td>
+                <select class="estado-select" onchange="cambiarEstado(this)">
+                  <option value="Pendiente" selected>Pendiente</option>
+                  <option value="En Proceso">En Proceso</option>
+                  <option value="Finalizado">Finalizado</option>
+                  <option value="Rechazado">Rechazado</option>
+                </select>
+              </td>
+            </tr>
+            <tr data-id="2">
+              <td>Inscripción RTU</td>
+              <td>Rocío Méndez</td>
+              <td>10/01/2025</td>
+              <td>
+                <select class="estado-select" onchange="cambiarEstado(this)">
+                  <option value="Pendiente">Pendiente</option>
+                  <option value="En Proceso">En Proceso</option>
+                  <option value="Finalizado" selected>Finalizado</option>
+                  <option value="Rechazado">Rechazado</option>
+                </select>
+              </td>
+            </tr>
+            <tr data-id="3">
+              <td>Solicitud NIT</td>
+              <td>Alan Ramírez</td>
+              <td>12/01/2025</td>
+              <td>
+                <select class="estado-select" onchange="cambiarEstado(this)">
+                  <option value="Pendiente">Pendiente</option>
+                  <option value="En Proceso" selected>En Proceso</option>
+                  <option value="Finalizado">Finalizado</option>
+                  <option value="Rechazado">Rechazado</option>
+                </select>
+              </td>
+            </tr>
+            <tr data-id="4">
+              <td>Habilitación Libros</td>
+              <td>María López</td>
+              <td>08/01/2025</td>
+              <td>
+                <select class="estado-select" onchange="cambiarEstado(this)">
+                  <option value="Pendiente">Pendiente</option>
+                  <option value="En Proceso">En Proceso</option>
+                  <option value="Finalizado" selected>Finalizado</option>
+                  <option value="Rechazado">Rechazado</option>
+                </select>
+              </td>
+            </tr>
+            <tr data-id="5">
+              <td>Declaración ISR</td>
+              <td>Carlos Martínez</td>
+              <td>14/01/2025</td>
+              <td>
+                <select class="estado-select" onchange="cambiarEstado(this)">
+                  <option value="Pendiente" selected>Pendiente</option>
+                  <option value="En Proceso">En Proceso</option>
+                  <option value="Finalizado">Finalizado</option>
+                  <option value="Rechazado">Rechazado</option>
+                </select>
+              </td>
+            </tr>
+            <tr data-id="6">
+              <td>Autorización Factura</td>
+              <td>Ana González</td>
+              <td>11/01/2025</td>
+              <td>
+                <select class="estado-select" onchange="cambiarEstado(this)">
+                  <option value="Pendiente">Pendiente</option>
+                  <option value="En Proceso" selected>En Proceso</option>
+                  <option value="Finalizado">Finalizado</option>
+                  <option value="Rechazado">Rechazado</option>
+                </select>
+              </td>
+            </tr>
+            <tr data-id="7">
+              <td>Consulta RAE</td>
+              <td>Luis Rodríguez</td>
+              <td>09/01/2025</td>
+              <td>
+                <select class="estado-select" onchange="cambiarEstado(this)">
+                  <option value="Pendiente">Pendiente</option>
+                  <option value="En Proceso">En Proceso</option>
+                  <option value="Finalizado" selected>Finalizado</option>
+                  <option value="Rechazado">Rechazado</option>
+                </select>
+              </td>
+            </tr>
+            <tr data-id="8">
+              <td>Inscripción IGSS</td>
+              <td>Patricia Ramírez</td>
+              <td>13/01/2025</td>
+              <td>
+                <select class="estado-select" onchange="cambiarEstado(this)">
+                  <option value="Pendiente">Pendiente</option>
+                  <option value="En Proceso">En Proceso</option>
+                  <option value="Finalizado">Finalizado</option>
+                  <option value="Rechazado" selected>Rechazado</option>
+                </select>
+              </td>
+            </tr>
+            <tr data-id="9">
+              <td>Patente de Comercio</td>
+              <td>Roberto Morales</td>
+              <td>07/01/2025</td>
+              <td>
+                <select class="estado-select" onchange="cambiarEstado(this)">
+                  <option value="Pendiente">Pendiente</option>
+                  <option value="En Proceso">En Proceso</option>
+                  <option value="Finalizado" selected>Finalizado</option>
+                  <option value="Rechazado">Rechazado</option>
+                </select>
+              </td>
+            </tr>
+            <tr data-id="10">
+              <td>Licencia Sanitaria</td>
+              <td>Sofía Torres</td>
+              <td>16/01/2025</td>
+              <td>
+                <select class="estado-select" onchange="cambiarEstado(this)">
+                  <option value="Pendiente" selected>Pendiente</option>
+                  <option value="En Proceso">En Proceso</option>
+                  <option value="Finalizado">Finalizado</option>
+                  <option value="Rechazado">Rechazado</option>
+                </select>
+              </td>
+            </tr>
+            <tr data-id="11">
+              <td>Declaración IVA</td>
+              <td>Diego Castillo</td>
+              <td>05/01/2025</td>
+              <td>
+                <select class="estado-select" onchange="cambiarEstado(this)">
+                  <option value="Pendiente">Pendiente</option>
+                  <option value="En Proceso">En Proceso</option>
+                  <option value="Finalizado" selected>Finalizado</option>
+                  <option value="Rechazado">Rechazado</option>
+                </select>
+              </td>
+            </tr>
+            <tr data-id="12">
+              <td>Solicitud NIT</td>
+              <td>Gabriela Jiménez</td>
+              <td>17/01/2025</td>
+              <td>
+                <select class="estado-select" onchange="cambiarEstado(this)">
+                  <option value="Pendiente">Pendiente</option>
+                  <option value="En Proceso" selected>En Proceso</option>
+                  <option value="Finalizado">Finalizado</option>
+                  <option value="Rechazado">Rechazado</option>
+                </select>
+              </td>
+            </tr>
+            <tr data-id="13">
+              <td>Inscripción RTU</td>
+              <td>Juan Pérez</td>
+              <td>06/01/2025</td>
+              <td>
+                <select class="estado-select" onchange="cambiarEstado(this)">
+                  <option value="Pendiente">Pendiente</option>
+                  <option value="En Proceso">En Proceso</option>
+                  <option value="Finalizado" selected>Finalizado</option>
+                  <option value="Rechazado">Rechazado</option>
+                </select>
+              </td>
+            </tr>
+            <tr data-id="14">
+              <td>Habilitación Libros</td>
+              <td>Alan Ramírez</td>
+              <td>18/01/2025</td>
+              <td>
+                <select class="estado-select" onchange="cambiarEstado(this)">
+                  <option value="Pendiente" selected>Pendiente</option>
+                  <option value="En Proceso">En Proceso</option>
+                  <option value="Finalizado">Finalizado</option>
+                  <option value="Rechazado">Rechazado</option>
+                </select>
+              </td>
+            </tr>
+            <tr data-id="15">
+              <td>Consulta RAE</td>
+              <td>Rocío Méndez</td>
+              <td>19/01/2025</td>
+              <td>
+                <select class="estado-select" onchange="cambiarEstado(this)">
+                  <option value="Pendiente">Pendiente</option>
+                  <option value="En Proceso" selected>En Proceso</option>
+                  <option value="Finalizado">Finalizado</option>
+                  <option value="Rechazado">Rechazado</option>
+                </select>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="btn-agregar-container">
+        <button class="btn-agregar-estado" onclick="abrirModalAgregarEstado()">+ Agregar</button>
+      </div>
+
+      <div class="table-pagination">
+        <div class="pagination-info">
+          <span>Rows per page: </span>
+          <select id="rowsPerPageEstado">
+            <option value="10" selected>10</option>
+            <option value="25">25</option>
+            <option value="50">50</option>
+          </select>
+        </div>
+        <div class="pagination-controls">
+          <span id="paginationTextEstado">1-15 of 15</span>
+          <button id="prevPageEstado" class="pagination-btn" disabled>&lt;</button>
+          <button id="nextPageEstado" class="pagination-btn">&gt;</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Modal: Agregar Estado de Trámite -->
+  <div id="modal-agregar-estado" class="modal">
+    <div class="modal-content modal-form">
+      <h2>Agregar Estado de Trámite</h2>
+      <form id="formAgregarEstado">
+        <div class="form-group">
+          <label for="estadoCliente">Cliente:</label>
+          <select id="estadoCliente" class="input-modal" required>
+            <option value="">Seleccione un cliente</option>
+            <option value="Sofía Torres">Sofía Torres</option>
+            <option value="Rocío Méndez">Rocío Méndez</option>
+            <option value="Alan Ramírez">Alan Ramírez</option>
+            <option value="María López">María López</option>
+            <option value="Carlos Martínez">Carlos Martínez</option>
+            <option value="Ana González">Ana González</option>
+            <option value="Luis Rodríguez">Luis Rodríguez</option>
+            <option value="Patricia Ramírez">Patricia Ramírez</option>
+            <option value="Roberto Morales">Roberto Morales</option>
+            <option value="Diego Castillo">Diego Castillo</option>
+            <option value="Gabriela Jiménez">Gabriela Jiménez</option>
+            <option value="Juan Pérez">Juan Pérez</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="estadoTramite">Trámite:</label>
+          <select id="estadoTramite" class="input-modal" required>
+            <option value="">Seleccione un trámite</option>
+            <option value="Declaración IVA">Declaración IVA</option>
+            <option value="Declaración ISR">Declaración ISR</option>
+            <option value="Inscripción RTU">Inscripción RTU</option>
+            <option value="Solicitud NIT">Solicitud NIT</option>
+            <option value="Habilitación Libros">Habilitación Libros</option>
+            <option value="Autorización Factura">Autorización Factura</option>
+            <option value="Consulta RAE">Consulta RAE</option>
+            <option value="Inscripción IGSS">Inscripción IGSS</option>
+            <option value="Patente de Comercio">Patente de Comercio</option>
+            <option value="Licencia Sanitaria">Licencia Sanitaria</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="estadoFechaInicio">Fecha de Inicio:</label>
+          <input type="date" id="estadoFechaInicio" class="input-modal" required>
+        </div>
+        <div class="form-group">
+          <label for="estadoEstado">Estado:</label>
+          <select id="estadoEstado" class="input-modal" required>
+            <option value="">Seleccione un estado</option>
+            <option value="Pendiente">Pendiente</option>
+            <option value="En Proceso">En Proceso</option>
+            <option value="Finalizado">Finalizado</option>
+            <option value="Rechazado">Rechazado</option>
+          </select>
+        </div>
+        <div class="modal-buttons">
+          <button type="submit" class="btn btn-primary">Guardar</button>
+          <button type="button" data-close class="btn btn-secondary">Cancelar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal: Confirmación Estado Guardado -->
+  <div id="modal-estado-guardado" class="modal">
+    <div class="modal-content modal-confirm">
+      <div class="warning-icon">⚠️</div>
+      <h2>ESTADO AGREGADO CORRECTAMENTE</h2>
+      <p>El estado del trámite ha sido guardado exitosamente</p>
+      <button id="btn-aceptar-estado" class="btn btn-primary">ACEPTAR</button>
+    </div>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
