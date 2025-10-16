@@ -38,7 +38,7 @@ a:hover{text-decoration:underline}
 .login-left{max-width:520px;margin-left:4vw}
 .login-title{font-size:14px;letter-spacing:.2em;opacity:.8;margin-bottom:8px}
 .login-h1{font-size:36px;margin:0 0 26px}
-.login-actions{display:flex;align-items:center;gap:16px;margin-top:8px}
+.login-actions{display:flex;align-items:center;gap:16px;margin-top:28px}
 .login-small{margin-top:18px;font-size:.9rem;opacity:.9}
 .login-figure{width:520px;height:520px;border-radius:50%;background:rgba(0,0,0,.25);display:grid;place-items:center;overflow:hidden;justify-self:center;background-image:url("../assets/images/login-foto.png");background-size:cover;background-position:center}
 
@@ -47,6 +47,7 @@ a:hover{text-decoration:underline}
 .register-card{background:#f7d1e6;border-radius:16px;padding:20px;box-shadow:var(--shadow)}
 .register-title{font-weight:800;letter-spacing:.06em;margin-left:5px;margin-bottom:4px;color:#7a2068}
 .register-btn{background:#0a1a2b;color:#fff}
+.register-card .footer-actions{ margin-top: 48px}
 
 /* MODAL */
 .modal{position:fixed;inset:0;background:rgba(0,0,0,.45);display:none;align-items:center;justify-content:center;padding:20px;z-index:1000}
